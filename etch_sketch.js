@@ -3,9 +3,9 @@ const grid = document.querySelector("#grid");
 let gridLength =prompt("Please enter the grid length");
 
 
-gridSize(gridLength);
+setGridSize(gridLength);
 
-function gridSize(gridLength){
+function setGridSize(gridLength){
 
     let gridArea = (gridLength*gridLength);
 
@@ -14,21 +14,24 @@ function gridSize(gridLength){
         
         newSqaure.classList.add("box");
         newSqaure.addEventListener("mouseover",function (e){
-            console.log(e);
-            console.log(e.target);
+            //console.log(e);
+            //console.log(e.target);
             e.target.classList.add("black");
         });
 
         newSqaure.style.width =`${(512/gridLength)}px`;
         grid.appendChild(newSqaure);
     }
-    
-    const boxes=document.querySelectorAll(".box");
-    
     return;
 }
 
-function colorChange(){
-    newSquare.classList.add("black");
-    return;
+function resetGrid(){
+    let oldGrid= document.querySelectorAll(".box");
+    console.log(oldGrid);
+    for (const oldBox of oldGrid){
+        grid.removeChild(oldBox);
+        
+    }
+    let gridLength =prompt("Please enter the grid length");
+    setGridSize(gridLength);
 }
