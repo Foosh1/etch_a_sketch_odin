@@ -4,12 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="etch_sketch.js" defer></script>
-    <link rel ="stylesheet" href ="styles.css">
-    <title>Document</title>
+    <script src="script.js" defer></script>
+    <link rel ="stylesheet" href ="style.css">
+    <title>Etch-a-Sketch</title>
 </head>
 <body>
-    <button class ="resetGrid" onclick="resetGrid()"> Reset Grid</button>
+    <h1> Etch-a-Sketch</h1>
+    <div class ="controls">
+        
+        <div class= "controlBox">
+            <div class ="controlsTitle"> Brush Size</div>
+            <div class="gridButts">
+                <button onclick="newGrid(96)">Extra Small</button>
+                <button onclick="newGrid(64)">Small</button>
+                <button onclick="newGrid(32)">Medium</button>
+                <button onclick="newGrid(16)">Large</button>
+            </div>
+        </div>
+
+        <div class="controlBox">
+            <div class="controlsTitle"> Brush Colour</div>
+            <div class="gridButts">
+                <input type ="color" id="colorInput">
+                <button onclick="selectBrush(`rainbowBrush`)"> Rainbow Mode</button>
+                <button onclick="selectBrush(`black`)"> Black</button>
+                <button onclick="selectBrush(`white`)"> White</button>
+            </div>
+        </div>
+
+        <div class="controlBox">
+            <div class="controlsTitle"> Canvas Controls</div>
+            <div class="gridButts">
+                <button class ="resetGrid" onclick="resetGrid()"> Reset Grid</button>
+                <button class ="toggleLines" onclick="toggleLines()">Toggle Lines</button>
+            </div>
+        </div>
+    </div>
+
     <div id="grid"></div>
     
 </body>

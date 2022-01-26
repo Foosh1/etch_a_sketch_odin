@@ -1,0 +1,91 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+h1{
+    font-size: 50px;
+    font-weight: bolder;
+    color: red;
+}
+
+.controls{
+    justify-content: center;
+    align-items:flex-end;
+    column-gap: 4px;
+    width:518px;
+    display: flex;
+}
+
+#grid{
+    display: flex;
+    flex-wrap: wrap;
+    height: 518px;
+    width: 518px;
+    border-style:solid;
+    border-width: 3px;
+    
+}
+
+.lines{
+    border-style: solid;
+    border-width: 1px;
+    border-color: whitesmoke;
+
+}
+
+button,
+#colorInput{
+    margin-bottom: 10px;
+    font-size: large;
+    font-weight: bold;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+    border-radius:5px;
+    background-color: wheat;
+}
+
+#colorInput{
+    height: 60px;
+    width: 60px;
+    flex-shrink: 0;
+    background-color: whitesmoke;
+}
+
+.controlsTitle{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    background-color:whitesmoke;
+}
+
+.controlBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 128px;
+    background-color:whitesmoke;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+    border-radius:5px;
+    margin-bottom: 10px;
+    padding: 4px;
+}
+.gridButts{
+    display: flex;
+    column-gap: 4px;
+}
